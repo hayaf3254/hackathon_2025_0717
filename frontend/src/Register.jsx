@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 import './Register.css';
 
 function SignUpForm() {
@@ -90,7 +90,7 @@ function SignUpForm() {
 				{result && <p>{result}</p>}
 
 				<div className="register-link" style={{ marginTop: "20px" }}>
-					すでにアカウントをお持ちですか？<br /> <a href="index.html">ログインはこちら</a>
+					すでにアカウントをお持ちですか？<br /> <Link to="/login">ログインはこちら</Link>
 				</div>
 			</div>
 		</div>
