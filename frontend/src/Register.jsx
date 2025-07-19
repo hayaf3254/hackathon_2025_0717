@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import './Register.css';
 
 function SignUpForm() {
@@ -7,6 +8,8 @@ function SignUpForm() {
 	const [password, setPassword] = useState('');
 	const [confirm, setConfirm] = useState('');
 	const [result, setResult] = useState('');
+	
+	const navigate = useNavigate();
 
 	const handleSubmit = async(e) => {
 		e.preventDefault();
@@ -15,19 +18,26 @@ function SignUpForm() {
 			setResult('パスワードが一致していません');
 			return;
 		}
+		try{
+			const res = await fetch('http://localhost:5000/api/register', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ username, email, password}),
+			});
 
-		const res = await fetch('http://localhost:5000/api/register', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({ username, email, password}),
-		});
+			const data = await res.json();
 
-		const data = await res.json();
-		setResult(data.message);
+			if(res.status === 201) {
+				navigate("/register/complete", {state: { message: data.message}});
+			}
+		}catch(err) {
+			console.error(err);
+			alert("登録に失敗しました");
+		}
 	};
-	
+
 	return (
 		<div className="container">
 			<div className="login-box">
