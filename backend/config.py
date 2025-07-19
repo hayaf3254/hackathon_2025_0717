@@ -1,5 +1,13 @@
 # config.py
 import os
+import sqlite3
+
+DB_PATH = os.path.join(os.path.dirname(__file__), "users.db")
+
+def get_db_connection():
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'your_secret_key_here'
