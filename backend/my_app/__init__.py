@@ -2,6 +2,7 @@
 from flask import Flask
 from flask_cors import CORS
 from config import config # config.py から config ディクショナリをインポート
+from my_app.AI import AI
 
 def create_app(config_name='default'): # ★ここを修正しました！引数 config_name を追加
     app = Flask(__name__)
@@ -20,7 +21,7 @@ def create_app(config_name='default'): # ★ここを修正しました！引数
     CORS(
         app,
         supports_credentials=True, # ★★★ これを必ず追加してください ★★★
-        resources={r"/api/*": {"origins": app.config['CORS_ALLOWED_ORIGINS']}}
+        resources={r"/*": {"origins": app.config['CORS_ALLOWED_ORIGINS']}}
     )
     # --- ここまで修正 ---
 
@@ -28,5 +29,6 @@ def create_app(config_name='default'): # ★ここを修正しました！引数
     # APIエンドポイントを定義したBlueprintを登録
     from .api import api_bp as api_blueprint
     app.register_blueprint(api_blueprint, url_prefix='/api')
+    app.register_blueprint(AI, url_prefix='/ai')
 
     return app
