@@ -3,6 +3,8 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Register from './Register'
 import Login from './Login' 
+import Complete from './Complete'
+import { AuthProvider } from './contexts/AuthContext';//追加
 
 function StartScreen() {
   return (
@@ -23,14 +25,17 @@ function StartScreen() {
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<StartScreen />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </Router>
-  )
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<StartScreen />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/register/complete" element={<Complete />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
+  );
 }
 
 export default App
