@@ -15,7 +15,7 @@ api_bp = Blueprint('api', __name__)
 #def root_endpoint():
 #    return jsonify({"message": "Welcome to the root of the API!"})
 
-@api_bp.route('/api/login', methods=['POST'])
+@api_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
     email = data.get('email')
@@ -34,7 +34,7 @@ def login():
 
 
 
-@api_bp.route('/api/register', methods=['POST'])
+@api_bp.route('/register', methods=['POST'])
 def register():
     data = request.get_json()
     username = data.get('username')
