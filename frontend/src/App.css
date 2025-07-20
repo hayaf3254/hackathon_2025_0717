@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+/* セレクト画面 */
+.select-button{
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 30px;
+  /* 画像に合わせた青色に変更 */
+  background: #3b82f6; 
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.select-button:hover {
+  /* ホバー時にもう少し濃い青に変更 */
+  background: #2563eb; 
+}
