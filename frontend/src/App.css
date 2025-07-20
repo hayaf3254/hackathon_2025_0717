@@ -91,6 +91,7 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+<<<<<<<<< Temporary merge branch 1
 /* コンテナ全体 */
 .prompt-list-container {
   max-width: 700px;
@@ -143,60 +144,7 @@
   background-color: #1d4ed8;
   transform: translate(-50%, -2px); /* X方向は中央寄せのままYだけ浮かす */
 }
-
-/* コンテナ全体 */
-.prompt-list-container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* 各カード */
-.prompt-card {
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 24px;
-  margin-bottom: 24px;
-}
-
-/* タイトル */
-.prompt-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #111827;
-}
-
-/* 説明文 */
-.prompt-description {
-  font-size: 15px;
-  color: #4b5563;
-  line-height: 1.6;
-}
-
-.prompt-create-button {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  padding: 14px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.25);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.prompt-create-button:hover {
-  background-color: #1d4ed8;
-  transform: translate(-50%, -2px); /* X方向は中央寄せのままYだけ浮かす */
-}
-
+=========
 /* グローバルスタイルとフォント設定 */
 body {
   margin: 0;
@@ -275,3 +223,4 @@ body {
 .page-container {
     padding: 40px;
 }
+>>>>>>>>> Temporary merge branch 2
