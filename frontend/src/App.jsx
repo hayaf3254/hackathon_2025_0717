@@ -8,6 +8,7 @@ import { AuthProvider } from './contexts/AuthContext';//追加
 import CreateAI from './CreateAI';
 import Select from './Select';
 import PromptList from './PromptList'
+import PromptDetail from './PromptDetail'
 
 function StartScreen() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/select" element={<Select />}/>
           <Route path="/prompts" element={<PromptList />} />
+          <Route path="/prompts/:promptId" element={<PromptDetail />} />
           <Route path="/create-ai" element={<CreateAI />} />
         </Routes>
       </Router>
