@@ -11,7 +11,7 @@ import Select from './Select'
 function StartScreen() {
   return (
     <div className="start-screen">
-      <h1 className="title">ようこそ！</h1>
+      <h1 className="title">プロンプト倉庫</h1>
       <div className="button-group">
         {/* 遷移用に Link を使用 */}
         <Link to="/register">

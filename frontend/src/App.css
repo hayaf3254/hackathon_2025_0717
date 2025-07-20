@@ -47,7 +47,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   background-color: #f8fafc; /* 薄いグレー背景 */
   padding: 40px 20px;
 }
@@ -90,4 +89,83 @@
   background: #2563eb; /* 濃い青 */
   transform: translateY(-2px); /* 少し浮く */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* グローバルスタイルとフォント設定 */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa; /* 少しだけグレーがかった背景 */
+}
+
+/* アプリケーション全体のコンテナ */
+.app-container {
+  text-align: center;
+}
+
+/* スタート画面のコンテナ */
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* タイトルのスタイル */
+.title {
+  font-size: 3.5rem; /* フォントサイズを大きく */
+  font-weight: 600;
+  color: #333; /* 少し柔らかい黒 */
+  margin-bottom: 40px; /* ボタンとの間隔 */
+}
+
+/* ボタンをまとめるグループ */
+.button-group {
+  display: flex;
+  gap: 20px; /* ボタン間のスペース */
+}
+
+/* 共通のボタンスタイル */
+.btn {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 8px; /* 角を丸く */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ほんのり影をつける */
+}
+
+.btn:hover {
+  transform: translateY(-2px); /* ホバー時に少し浮き上がる */
+}
+
+/* 登録ボタンのスタイル */
+.register-button {
+  background-color: #007bff; /* 青色 */
+}
+
+.register-button:hover {
+  background-color: #0056b3; /* ホバー時にもう少し濃い青 */
+}
+
+/* ログインボタンのスタイル */
+.login-button {
+  background-color: #007bff; /* 緑色 */
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* ホバー時にもう少し濃い緑 */
+}
+
+/* 他のページの基本的なスタイル */
+.page-container {
+    padding: 40px;
 }
