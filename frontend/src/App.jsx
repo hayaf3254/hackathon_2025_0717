@@ -6,6 +6,7 @@ import Login from './Login'
 import Complete from './Complete'
 import { AuthProvider } from './contexts/AuthContext';//追加
 import CreateAI from './CreateAI';
+import Select from './Select'
 
 function StartScreen() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/register/complete" element={<Complete />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/select" element={<Select />}/>
           <Route path="/create-ai" element={<CreateAI />} />
         </Routes>
       </Router>
